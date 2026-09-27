@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" width="1000" height="320">
+<title>Focus and Memory podcast banner</title>
+<desc>Cartoon banner for a neuroscience podcast episode, with a strong brain lifting a dumbbell and a sleeping phone in a parking box.</desc>
+<rect x="4" y="4" width="992" height="312" rx="24" fill="#FFFDF5" stroke="#E9ECEF" stroke-width="2"/>
+<g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" fill="#212529">
+  <rect x="58" y="72" width="190" height="48" rx="18" fill="#FFE066" transform="rotate(-3 153 96)" opacity="0.95"/>
+  <text x="62" y="111" font-size="44" font-weight="700">Focus &amp; Memory</text>
+  <text x="64" y="153" font-size="20">A neuroscientist's guide · Dr Sahar Yousef × Raj Shamani</text>
+  <text x="64" y="184" font-size="16" fill="#868E96">Figuring Out podcast · Episode FO559 · 2 h 55 min</text>
+  <g transform="translate(64 218)">
+    <rect width="216" height="38" rx="19" fill="#FFF3BF" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="25" cy="19" r="10" fill="#FFE066" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="45" y="25" font-size="16" font-weight="700">Important = yellow</text>
+  </g>
+  <g transform="translate(296 218)">
+    <rect width="234" height="38" rx="19" fill="#D0EBFF" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="25" cy="19" r="10" fill="#4DABF7" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="45" y="25" font-size="16" font-weight="700">Research notes = blue</text>
+  </g>
+  <g transform="translate(610 70)">
+    <line x1="36" y1="34" x2="20" y2="8" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <line x1="150" y1="34" x2="166" y2="8" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <line x1="0" y1="8" x2="186" y2="8" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <rect x="-14" y="-4" width="28" height="24" rx="5" fill="#868E96" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <rect x="172" y="-4" width="28" height="24" rx="5" fill="#868E96" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M41 75 C20 62,23 33,48 32 C54 10,86 13,93 31 C111 9,147 26,137 53 C161 56,165 91,139 101 C135 128,95 129,84 109 C63 126,28 110,41 75 Z" fill="#FFDEEB" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M63 41 C45 52,51 74,70 77 M94 36 C78 50,80 68,97 76 M126 48 C108 51,104 72,121 83 M62 95 C80 87,96 91,105 108" fill="none" stroke="#FFA8C5" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="73" cy="71" r="5" fill="#212529"/>
+    <circle cx="115" cy="71" r="5" fill="#212529"/>
+    <path d="M80 91 C91 101,107 101,118 91" fill="none" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M38 84 C17 84,11 100,14 113" fill="none" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M145 84 C165 85,172 101,169 114" fill="none" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M206 18 L214 7 M218 37 L233 34 M206 55 L217 66" fill="none" stroke="#FFE066" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(777 180)">
+    <path d="M28 36 L176 36 L154 92 L8 92 Z" fill="#FFE8CC" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M28 36 L58 16 L200 16 L176 36 Z" fill="#FFA94D" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M176 36 L200 16 L174 72 L154 92 Z" fill="#FFE8CC" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="83" y="62" font-size="16" font-weight="700" text-anchor="middle">PHONE</text>
+    <text x="83" y="82" font-size="16" font-weight="700" text-anchor="middle">PARKING</text>
+    <g transform="rotate(-10 90 12)">
+      <rect x="108" y="-24" width="61" height="92" rx="13" fill="#343A40" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <rect x="116" y="-12" width="45" height="63" rx="7" fill="#D0EBFF" stroke="#343A40" stroke-width="2"/>
+      <path d="M127 18 C132 23,144 23,149 18" fill="none" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <line x1="128" y1="6" x2="133" y2="6" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <line x1="145" y1="6" x2="150" y2="6" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    </g>
+    <text x="126" y="2" font-size="20" fill="#868E96">z z z</text>
+  </g>
+</g>
+</svg>
+

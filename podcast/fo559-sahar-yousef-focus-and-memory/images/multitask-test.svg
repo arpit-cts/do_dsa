@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" width="1000" height="420">
+<title>The multitasking test from the show</title>
+<desc>A cartoon tilted worksheet and bar chart compare doing one line at a time with switching after every letter.</desc>
+<rect x="4" y="4" width="992" height="412" rx="24" fill="#FFFDF5" stroke="#E9ECEF" stroke-width="2"/>
+<g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" fill="#212529">
+  <text x="50" y="58" font-size="32" font-weight="700">The multitasking test Raj took on the show</text>
+  <g transform="translate(70 95) rotate(-5 170 110)">
+    <rect x="0" y="0" width="350" height="205" rx="18" fill="#FFFFFF" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <line x1="28" y1="62" x2="312" y2="62" stroke="#D0EBFF" stroke-width="3"/>
+    <line x1="28" y1="112" x2="312" y2="112" stroke="#D0EBFF" stroke-width="3"/>
+    <text x="30" y="52" font-size="24" font-style="italic" fill="#1971C2">I am a great multitasker</text>
+    <text x="30" y="103" font-size="24" font-style="italic" fill="#1971C2">1 2 3 4 5 ... 20</text>
+    <path d="M242 160 L319 123 L333 142 L257 179 Z" fill="#FFE066" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M319 123 L344 114 L333 142 Z" fill="#FFE8CC" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M337 117 L344 114 L340 121 Z" fill="#343A40"/>
+    <rect x="238" y="164" width="28" height="20" rx="5" fill="#FFA94D" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(505 90)">
+    <g transform="translate(332 -2)">
+      <circle cx="30" cy="30" r="24" fill="#D0EBFF" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <rect x="22" y="-2" width="16" height="10" rx="3" fill="#F1F3F5" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <line x1="30" y1="30" x2="30" y2="14" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <line x1="30" y1="30" x2="42" y2="35" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    </g>
+    <line x1="0" y1="190" x2="380" y2="190" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <line x1="0" y1="190" x2="0" y2="40" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <g font-size="15" fill="#495057">
+      <text x="-5" y="216">0</text><text x="118" y="216">15</text><text x="245" y="216">30</text><text x="370" y="216">45</text>
+    </g>
+    <g stroke="#CED4DA" stroke-width="2">
+      <line x1="127" y1="40" x2="127" y2="195"/><line x1="253" y1="40" x2="253" y2="195"/><line x1="380" y1="40" x2="380" y2="195"/>
+    </g>
+    <text x="0" y="67" font-size="17">Round 1 · one line, then the other</text>
+    <rect x="0" y="82" width="150" height="27" rx="13" fill="#69DB7C" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="160" y="104" font-size="16" font-weight="700">17.72 s</text>
+    <text x="0" y="137" font-size="17">Round 2 · alternating</text>
+    <rect x="0" y="152" width="349" height="27" rx="13" fill="#FF6B6B" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="267" y="174" font-size="16" font-weight="700" fill="#FFFFFF">41.35 s</text>
+    <g transform="translate(88 248)">
+      <rect x="0" y="0" width="246" height="34" rx="17" fill="#FFE3E3" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <text x="15" y="23" font-size="16" font-weight="700">2.3× slower + more mistakes</text>
+    </g>
+    <text x="166" y="236" font-size="15" fill="#495057">seconds</text>
+  </g>
+  <text x="97" y="405" font-size="18" font-weight="700" fill="#495057">Same brain, same words. The only change was switching back and forth.</text>
+</g>
+</svg>

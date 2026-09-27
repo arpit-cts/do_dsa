@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="1000" height="720">
+  <title>Your brain as a city</title>
+  <desc>A cartoon map of six brain-network buildings connected by roads and dashed labelled arrows, with a buzzing phone beside the Dispatch Center.</desc>
+  <defs>
+    <style>
+      .ink{stroke:#343A40;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+      .txt{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;fill:#212529}
+      .title{font-size:32px;font-weight:700}.name{font-size:17px;font-weight:700}.net{font-size:16px;font-weight:700}.job{font-size:15px}.arrowlbl{font-size:15px;font-weight:700}.note{font-size:15px}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#343A40"/>
+    </marker>
+  </defs>
+  <rect x="4" y="4" width="992" height="712" rx="24" fill="#FFFDF5" stroke="#E9ECEF" stroke-width="2"/>
+  <g class="txt">
+    <text class="title" x="500" y="50" text-anchor="middle">Your brain as a city (the map from the episode)</text>
+    <rect class="ink" x="35" y="78" width="930" height="592" rx="28" fill="#D3F9D8"/>
+
+    <g opacity="0.95" class="ink" fill="none" stroke="#F1F3F5" stroke-width="44">
+      <path d="M185 196 H500 H815"/>
+      <path d="M185 482 H500 H815"/>
+      <path d="M185 196 V482"/>
+      <path d="M500 196 V482"/>
+      <path d="M815 196 V482"/>
+      <path d="M185 482 C300 555 690 555 815 482"/>
+    </g>
+    <g class="ink" fill="none" stroke="#868E96" stroke-width="3" stroke-dasharray="9 11" opacity="0.7">
+      <path d="M185 196 H815 M185 482 H815 M185 196 V482 M500 196 V482 M815 196 V482"/>
+    </g>
+
+    <g class="ink" fill="none" stroke="#343A40" stroke-width="3" stroke-dasharray="10 9" marker-end="url(#arrow)">
+      <path d="M255 187 C330 142 410 142 470 183"/>
+      <path d="M565 187 C650 143 720 143 782 184"/>
+      <path d="M236 468 C345 396 500 364 628 332 C675 286 720 235 758 214"/>
+      <path d="M505 421 C610 378 650 340 674 315 C690 278 730 235 758 214"/>
+    </g>
+    <rect x="286" y="130" width="134" height="24" rx="12" fill="#FFFDF5"/>
+    <text class="arrowlbl" x="353" y="148" text-anchor="middle"><tspan>meaning</tspan><tspan dx="5">→</tspan><tspan dx="5">goal</tspan></text>
+    <rect x="620" y="130" width="105" height="24" rx="12" fill="#FFFDF5"/>
+    <text class="arrowlbl" x="672" y="148" text-anchor="middle">where to look</text>
+    <rect x="284" y="409" width="82" height="24" rx="12" fill="#FFFDF5"/>
+    <text class="arrowlbl" x="325" y="427" text-anchor="middle">interrupt!</text>
+    <rect x="538" y="374" width="94" height="24" rx="12" fill="#FFFDF5"/>
+    <text class="arrowlbl" x="585" y="392" text-anchor="middle">emergency!</text>
+
+    <g transform="translate(70 102)">
+      <rect class="ink" x="18" y="48" width="132" height="80" rx="14" fill="#E5DBFF"/>
+      <path class="ink" d="M18 48 L84 14 L150 48 Z" fill="#9775FA"/>
+      <rect class="ink" x="45" y="75" width="26" height="53" fill="#FFFDF5"/>
+      <circle class="ink" cx="112" cy="86" r="24" fill="#FFFDF5"/>
+      <circle cx="112" cy="86" r="6" fill="#343A40"/>
+      <path class="ink" d="M44 33 h80 l10 28 h-80 z M62 33 l10 28 M84 33 l10 28 M106 33 l10 28" fill="#FFFDF5"/>
+      <rect class="ink" x="-5" y="143" width="240" height="86" rx="16" fill="#FFFDF5"/>
+      <text class="name" x="115" y="168" text-anchor="middle">Story Studios</text>
+      <text class="net" x="115" y="190" text-anchor="middle" fill="#9775FA">DMN · default mode network</text>
+      <text class="job" x="115" y="214" text-anchor="middle">stories, identity, ideas, daydreams</text>
+    </g>
+
+    <g transform="translate(385 102)">
+      <path class="ink" d="M28 62 H142 L130 37 Q85 10 40 37 Z" fill="#D0EBFF"/>
+      <path class="ink" d="M67 36 Q85 12 103 36" fill="#4DABF7"/>
+      <rect class="ink" x="33" y="62" width="104" height="66" fill="#D0EBFF"/>
+      <g fill="#FFFDF5"><rect class="ink" x="47" y="73" width="14" height="55"/><rect class="ink" x="78" y="73" width="14" height="55"/><rect class="ink" x="109" y="73" width="14" height="55"/></g>
+      <path class="ink" d="M24 128 H146"/>
+      <rect class="ink" x="-5" y="143" width="240" height="86" rx="16" fill="#FFFDF5"/>
+      <text class="name" x="115" y="168" text-anchor="middle">City Hall</text>
+      <text class="net" x="115" y="190" text-anchor="middle" fill="#1971C2">CEN · central executive network</text>
+      <text class="job" x="115" y="214" text-anchor="middle">goals &amp; focus; shh distractions</text>
+    </g>
+
+    <g transform="translate(700 102)">
+      <path d="M80 58 L163 16 L154 94 Z" fill="#FFF3BF" opacity="0.9"/>
+      <rect class="ink" x="58" y="50" width="52" height="78" rx="9" fill="#FFE066"/>
+      <path class="ink" d="M67 50 L84 24 L101 50" fill="#FFF3BF"/>
+      <circle class="ink" cx="84" cy="68" r="13" fill="#FFFDF5"/>
+      <path class="ink" d="M53 128 H115 M68 88 H100 M68 105 H100" fill="none"/>
+      <rect class="ink" x="-5" y="143" width="240" height="86" rx="16" fill="#FFFDF5"/>
+      <text class="name" x="115" y="168" text-anchor="middle">Watchtower</text>
+      <text class="net" x="115" y="190" text-anchor="middle" fill="#C99100">DAN · dorsal attention network</text>
+      <text class="job" x="115" y="214" text-anchor="middle">points the spotlight of attention</text>
+    </g>
+
+    <g transform="translate(70 388)">
+      <rect class="ink" x="23" y="53" width="126" height="75" rx="14" fill="#FFE8CC"/>
+      <rect class="ink" x="52" y="78" width="56" height="30" rx="7" fill="#FFA94D"/>
+      <text class="name" x="80" y="100" text-anchor="middle" fill="#212529">911</text>
+      <path class="ink" d="M115 54 L147 22" fill="none"/>
+      <path class="ink" d="M146 22 C172 32 172 57 149 70 C143 55 133 38 146 22" fill="#FFFDF5"/>
+      <path class="ink" d="M128 22 Q144 8 164 12" fill="none"/>
+      <g transform="translate(160 73)">
+        <rect class="ink" x="0" y="0" width="36" height="55" rx="8" fill="#343A40"/>
+        <rect x="7" y="8" width="22" height="31" rx="4" fill="#D0EBFF"/>
+        <circle cx="13" cy="22" r="2" fill="#343A40"/><circle cx="23" cy="22" r="2" fill="#343A40"/>
+        <path class="ink" d="M12 31 Q18 35 24 31" fill="none"/>
+        <path class="ink" d="M-11 11 Q-19 19 -11 27 M47 11 Q55 19 47 27 M-16 2 Q-31 19 -16 36 M52 2 Q67 19 52 36" fill="none"/>
+      </g>
+      <rect class="ink" x="-5" y="143" width="240" height="86" rx="16" fill="#FFFDF5"/>
+      <text class="name" x="115" y="168" text-anchor="middle">Dispatch Center</text>
+      <text class="net" x="115" y="190" text-anchor="middle" fill="#D9480F">Salience network</text>
+      <text class="job" x="115" y="214" text-anchor="middle">Look over here! notifications</text>
+    </g>
+
+    <g transform="translate(385 388)">
+      <rect class="ink" x="58" y="45" width="64" height="83" rx="10" fill="#FFE3E3"/>
+      <path class="ink" d="M49 45 H131 L119 21 H61 Z" fill="#FF6B6B"/>
+      <circle class="ink" cx="90" cy="30" r="16" fill="#FFE066"/>
+      <path class="ink" d="M90 14 V3 M72 22 L61 13 M108 22 L119 13" fill="none"/>
+      <rect class="ink" x="74" y="78" width="32" height="50" fill="#FFFDF5"/>
+      <path class="ink" d="M48 128 H132"/>
+      <rect class="ink" x="-5" y="143" width="240" height="86" rx="16" fill="#FFFDF5"/>
+      <text class="name" x="115" y="168" text-anchor="middle">Alarm Tower</text>
+      <text class="net" x="115" y="190" text-anchor="middle" fill="#E03131">Amygdala</text>
+      <text class="job" x="115" y="214" text-anchor="middle">fear and emergencies</text>
+    </g>
+
+    <g transform="translate(700 388)">
+      <rect class="ink" x="27" y="47" width="126" height="81" rx="14" fill="#D3F9D8"/>
+      <path class="ink" d="M27 47 H153 L135 22 H45 Z" fill="#69DB7C"/>
+      <g>
+        <rect class="ink" x="43" y="67" width="18" height="43" fill="#FFF3BF"/>
+        <rect class="ink" x="65" y="67" width="18" height="43" fill="#D0EBFF"/>
+        <rect class="ink" x="87" y="67" width="18" height="43" fill="#FFDEEB"/>
+        <rect class="ink" x="109" y="67" width="18" height="43" fill="#E5DBFF"/>
+        <path class="ink" d="M39 114 H132"/>
+      </g>
+      <rect class="ink" x="-5" y="143" width="240" height="86" rx="16" fill="#FFFDF5"/>
+      <text class="name" x="115" y="168" text-anchor="middle">Library &amp; Archive</text>
+      <text class="net" x="115" y="190" text-anchor="middle" fill="#2F9E44">Hippocampus</text>
+      <text class="job" x="115" y="214" text-anchor="middle">memories</text>
+    </g>
+
+    <g transform="translate(492 622)">
+      <rect class="ink" x="0" y="0" width="336" height="42" rx="17" fill="#FFF3BF"/>
+      <text class="note" x="168" y="17" text-anchor="middle" font-weight="700">next door: scary or emotional</text>
+      <text class="note" x="168" y="35" text-anchor="middle">moments are remembered best</text>
+    </g>
+  </g>
+</svg>
+
+
+
+
+
+
+
+

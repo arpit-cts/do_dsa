@@ -1,0 +1,56 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="1000" height="440">
+  <title>Stress is fine. Never finishing the stress cycle is not.</title>
+  <desc>Two cartoon panels compare stress cycles that rise and return to calm with a modern day staircase of stressors that never comes down and ends in burnout.</desc>
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="4" y="4" width="992" height="432" rx="24" fill="#FFFDF5" stroke="#E9ECEF" stroke-width="2"/>
+    <text x="500" y="48" text-anchor="middle" font-size="32" font-weight="700" fill="#212529">Stress is fine. Never finishing the stress cycle is not.</text>
+
+    <g transform="translate(50 82)">
+      <rect x="0" y="0" width="420" height="252" rx="22" fill="#D3F9D8" stroke="#E9ECEF" stroke-width="2"/>
+      <text x="210" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#212529">What we are built for</text>
+      <line x1="40" y1="188" x2="380" y2="188" stroke="#868E96" stroke-width="3" stroke-dasharray="9 9"/>
+      <text x="42" y="174" font-size="16" fill="#868E96">calm</text>
+      <path d="M76 188 C86 112 132 112 142 188 C152 112 198 112 208 188 C218 112 264 112 274 188 C284 112 330 112 340 188" fill="none" stroke="#2F9E44" stroke-width="5"/>
+      <g fill="none" stroke="#2F9E44" stroke-width="4">
+        <path d="M145 178 L152 184 L164 169"/>
+        <path d="M211 178 L218 184 L230 169"/>
+        <path d="M277 178 L284 184 L296 169"/>
+        <path d="M343 178 L350 184 L362 169"/>
+      </g>
+      <g font-size="15" font-weight="700" fill="#2F9E44">
+        <text x="208" y="225" text-anchor="middle">cycle complete</text>
+      </g>
+    </g>
+
+    <g transform="translate(530 82)">
+      <rect x="0" y="0" width="420" height="252" rx="22" fill="#FFE3E3" stroke="#E9ECEF" stroke-width="2"/>
+      <text x="210" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#212529">A modern day</text>
+      <line x1="40" y1="196" x2="380" y2="196" stroke="#868E96" stroke-width="3" stroke-dasharray="9 9"/>
+      <text x="42" y="183" font-size="16" fill="#868E96">calm</text>
+      <path d="M42 196 L88 196 L88 176 L134 176 L134 156 L180 156 L180 136 L226 136 L226 116 L272 116 L272 96 L325 96" fill="none" stroke="#FF6B6B" stroke-width="5"/>
+      <g font-size="15" fill="#212529">
+        <rect x="48" y="198" width="55" height="40" rx="10" fill="#FFFDF5" stroke="none" opacity="0.88"/>
+        <text x="75" y="214" text-anchor="middle">phone</text><text x="75" y="231" text-anchor="middle">alarm</text>
+        <rect x="94" y="157" width="52" height="24" rx="9" fill="#FFFDF5" stroke="none" opacity="0.88"/>
+        <text x="120" y="175" text-anchor="middle">emails</text>
+        <rect x="141" y="137" width="46" height="24" rx="9" fill="#FFFDF5" stroke="none" opacity="0.88"/>
+        <text x="164" y="155" text-anchor="middle">news</text>
+        <rect x="188" y="117" width="68" height="24" rx="9" fill="#FFFDF5" stroke="none" opacity="0.88"/>
+        <text x="222" y="135" text-anchor="middle">meetings</text>
+        <rect x="267" y="63" width="82" height="42" rx="10" fill="#FFFDF5" stroke="none" opacity="0.88"/>
+        <text x="308" y="80" text-anchor="middle">more</text><text x="308" y="97" text-anchor="middle">messages</text>
+      </g>
+      <g transform="translate(341 96)">
+        <path d="M0 64 C-20 46 -5 27 7 13 C10 31 25 32 20 5 C44 29 53 50 35 68 C25 78 9 77 0 64 Z" fill="#FFA94D" stroke="#343A40" stroke-width="3"/>
+        <path d="M13 63 C5 53 14 43 22 34 C26 48 34 49 32 35 C43 48 43 62 33 70 C26 76 18 73 13 63 Z" fill="#FFE066" stroke="#343A40" stroke-width="2"/>
+        <text x="21" y="101" text-anchor="middle" font-size="18" font-weight="700" fill="#212529">burnout</text>
+      </g>
+    </g>
+
+    <text x="500" y="391" text-anchor="middle" font-size="18" font-style="italic" fill="#212529">“Stress doesn't kill. Never completing the stress cycle kills.” — Dr Sahar Yousef</text>
+  </g>
+</svg>
+
+
+
+

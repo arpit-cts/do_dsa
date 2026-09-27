@@ -20,6 +20,12 @@ Follow them in **every session** — the owner should never have to repeat them.
   (Folder names the owner picks, like `think_recursion` and `maths_for_dsa`, are kept exactly as given.)
 - `maths_for_dsa/` (beside `dsa/`) is a start-to-end maths course for DSA and FAANG interviews — see the
   rules in [The maths course](#the-maths-course) below.
+- `podcast/` (beside `dsa/`) holds full podcast notes, one folder per episode:
+  `podcast/<code>-<guest>-<topic>/` (lowercase, hyphens), e.g. `podcast/fo559-sahar-yousef-focus-and-memory/`.
+  Each `README.md` has the whole conversation as spoken (speaker names, timestamps that link to the video,
+  the video's chapters as numbered `##` sections), important lines highlighted in yellow with `<mark>` plus a
+  🟡 **Key points** box after each chapter, my research notes in blue `> [!NOTE]` boxes with sources, cartoons
+  in `images/` (SVG) and Mermaid diagrams. List every episode in [`podcast/README.md`](podcast/README.md).
 
 ## Whenever I ask for a new problem or topic
 

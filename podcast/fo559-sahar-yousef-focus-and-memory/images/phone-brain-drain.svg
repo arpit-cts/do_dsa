@@ -1,0 +1,128 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="1000" height="440">
+  <title>Phone location and brain drain</title>
+  <desc>Three cartoon panels show better brain battery when a phone is in another room, lower battery when it is in a pocket or bag, and lowest when face-down on the desk.</desc>
+  <defs>
+    <style>
+      .ink{stroke:#343A40;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+      .txt{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;fill:#212529}
+      .small{font-size:15px}.label{font-size:18px}.head{font-size:20px;font-weight:700}.title{font-size:31px;font-weight:700}
+    </style>
+  </defs>
+  <rect x="4" y="4" width="992" height="432" rx="24" fill="#FFFDF5" stroke="#E9ECEF" stroke-width="2"/>
+  <g class="txt">
+    <text class="title" x="500" y="50" text-anchor="middle">Your phone drains your brain, even when it is switched off</text>
+
+    <g transform="translate(50 86)">
+      <rect class="ink" x="0" y="0" width="278" height="250" rx="22" fill="#D3F9D8"/>
+      <text class="head" x="139" y="32" text-anchor="middle">Phone in another room</text>
+      <g transform="translate(28 62)">
+        <rect class="ink" x="0" y="0" width="58" height="112" rx="5" fill="#F1F3F5"/>
+        <circle cx="46" cy="56" r="3" fill="#343A40"/>
+        <path class="ink" d="M58 0 L82 12 L82 124 L58 112" fill="#E9ECEF"/>
+        <g transform="translate(18 59) scale(.72)">
+          <rect class="ink" x="0" y="0" width="34" height="54" rx="8" fill="#343A40"/>
+          <rect x="6" y="7" width="22" height="32" rx="4" fill="#D0EBFF"/>
+          <circle cx="17" cy="45" r="2.5" fill="#D0EBFF"/>
+        </g>
+      </g>
+      <g transform="translate(166 58)">
+        <rect class="ink" x="0" y="0" width="78" height="36" rx="8" fill="#FFFDF5"/>
+        <rect x="78" y="12" width="8" height="12" rx="2" fill="#343A40"/>
+        <rect class="ink" x="9" y="8" width="13" height="20" rx="2" fill="#69DB7C"/>
+        <rect class="ink" x="25" y="8" width="13" height="20" rx="2" fill="#69DB7C"/>
+        <rect class="ink" x="41" y="8" width="13" height="20" rx="2" fill="#69DB7C"/>
+        <rect class="ink" x="57" y="8" width="13" height="20" rx="2" fill="#69DB7C"/>
+        <text class="small" x="39" y="57" text-anchor="middle" font-weight="700" fill="#2F9E44">brain battery</text>
+      </g>
+      <g transform="translate(112 119)">
+        <circle class="ink" cx="45" cy="22" r="19" fill="#FFE8CC"/>
+        <path class="ink" d="M26 18 Q45 3 64 18" fill="none"/>
+        <circle cx="38" cy="21" r="2.5" fill="#343A40"/><circle cx="52" cy="21" r="2.5" fill="#343A40"/>
+        <path class="ink" d="M38 30 Q45 35 52 30" fill="none"/>
+        <rect class="ink" x="19" y="43" width="52" height="58" rx="15" fill="#4DABF7"/>
+        <path class="ink" d="M19 58 L0 76 M71 58 L90 76" fill="none"/>
+        <path class="ink" d="M31 101 L24 134 M59 101 L66 134" fill="none"/>
+        <rect class="ink" x="92" y="62" width="68" height="46" rx="6" fill="#D0EBFF"/>
+        <rect class="ink" x="119" y="108" width="14" height="15" fill="#868E96"/>
+        <path class="ink" d="M105 123 H147" fill="none"/>
+      </g>
+      <rect class="ink" x="11" y="204" width="106" height="32" rx="16" fill="#69DB7C"/>
+      <text class="label" x="64" y="226" text-anchor="middle" font-weight="700">best scores</text>
+    </g>
+
+    <g transform="translate(361 86)">
+      <rect class="ink" x="0" y="0" width="278" height="250" rx="22" fill="#FFF3BF"/>
+      <text class="head" x="139" y="32" text-anchor="middle">Phone in pocket or bag</text>
+      <g transform="translate(22 70)">
+        <path class="ink" d="M29 43 C35 5 107 5 113 43" fill="none"/>
+        <path class="ink" d="M14 44 H128 L113 140 H29 Z" fill="#FFE066"/>
+        <g transform="translate(80 19) rotate(-9)">
+          <rect class="ink" x="0" y="0" width="35" height="57" rx="8" fill="#343A40"/>
+          <rect x="6" y="8" width="23" height="34" rx="4" fill="#D0EBFF"/>
+          <circle cx="17.5" cy="49" r="2.5" fill="#D0EBFF"/>
+          <circle cx="13" cy="23" r="2" fill="#343A40"/><circle cx="23" cy="23" r="2" fill="#343A40"/>
+          <path class="ink" d="M12 32 Q18 36 24 32" fill="none"/>
+        </g>
+      </g>
+      <g transform="translate(166 58)">
+        <rect class="ink" x="0" y="0" width="78" height="36" rx="8" fill="#FFFDF5"/>
+        <rect x="78" y="12" width="8" height="12" rx="2" fill="#343A40"/>
+        <rect class="ink" x="9" y="8" width="13" height="20" rx="2" fill="#69DB7C"/>
+        <rect class="ink" x="25" y="8" width="13" height="20" rx="2" fill="#69DB7C"/>
+        <rect class="ink" x="41" y="8" width="13" height="20" rx="2" fill="#FFE066"/>
+        <rect class="ink" x="57" y="8" width="13" height="20" rx="2" fill="#F1F3F5"/>
+        <text class="small" x="39" y="57" text-anchor="middle" font-weight="700" fill="#868E96">brain battery</text>
+      </g>
+      <g transform="translate(115 122)">
+        <circle class="ink" cx="45" cy="20" r="18" fill="#FFE8CC"/>
+        <path class="ink" d="M28 17 Q45 4 62 17" fill="none"/>
+        <circle cx="38" cy="20" r="2.5" fill="#343A40"/><circle cx="52" cy="20" r="2.5" fill="#343A40"/>
+        <path class="ink" d="M38 28 Q45 32 52 28" fill="none"/>
+        <rect class="ink" x="20" y="40" width="50" height="56" rx="14" fill="#FFA94D"/>
+        <path class="ink" d="M20 55 L4 78 M70 55 L88 78" fill="none"/>
+        <path class="ink" d="M31 96 L26 128 M59 96 L64 128" fill="none"/>
+        <rect class="ink" x="88" y="62" width="66" height="44" rx="6" fill="#D0EBFF"/>
+        <rect class="ink" x="114" y="106" width="14" height="15" fill="#868E96"/>
+        <path class="ink" d="M101 121 H141" fill="none"/>
+      </g>
+    </g>
+
+    <g transform="translate(672 86)">
+      <rect class="ink" x="0" y="0" width="278" height="250" rx="22" fill="#FFE8CC"/>
+      <text class="head" x="139" y="32" text-anchor="middle">Phone face-down on desk</text>
+      <g transform="translate(166 58)">
+        <rect class="ink" x="0" y="0" width="78" height="36" rx="8" fill="#FFFDF5"/>
+        <rect x="78" y="12" width="8" height="12" rx="2" fill="#343A40"/>
+        <rect class="ink" x="9" y="8" width="13" height="20" rx="2" fill="#FFA94D"/>
+        <rect class="ink" x="25" y="8" width="13" height="20" rx="2" fill="#FFA94D"/>
+        <rect class="ink" x="41" y="8" width="13" height="20" rx="2" fill="#F1F3F5"/>
+        <rect class="ink" x="57" y="8" width="13" height="20" rx="2" fill="#F1F3F5"/>
+        <text class="small" x="39" y="57" text-anchor="middle" font-weight="700" fill="#868E96">brain battery</text>
+      </g>
+      <g transform="translate(80 123)">
+        <circle class="ink" cx="45" cy="20" r="18" fill="#FFE8CC"/>
+        <path class="ink" d="M28 17 Q45 4 62 17" fill="none"/>
+        <circle cx="38" cy="20" r="2.5" fill="#343A40"/><circle cx="52" cy="20" r="2.5" fill="#343A40"/>
+        <path class="ink" d="M38 30 Q45 27 52 30" fill="none"/>
+        <rect class="ink" x="20" y="40" width="50" height="56" rx="14" fill="#9775FA"/>
+        <path class="ink" d="M20 55 L3 76 M70 55 L87 76" fill="none"/>
+        <path class="ink" d="M31 96 L26 128 M59 96 L64 128" fill="none"/>
+        <rect class="ink" x="89" y="61" width="66" height="44" rx="6" fill="#D0EBFF"/>
+        <rect class="ink" x="115" y="105" width="14" height="15" fill="#868E96"/>
+        <path class="ink" d="M102 120 H142" fill="none"/>
+        <g transform="translate(96 99) rotate(2)">
+          <rect class="ink" x="0" y="0" width="54" height="24" rx="7" fill="#343A40"/>
+          <circle cx="12" cy="12" r="2.3" fill="#D0EBFF"/><circle cx="26" cy="12" r="2.3" fill="#D0EBFF"/>
+          <path class="ink" d="M37 12 H47"/>
+        </g>
+      </g>
+      <rect class="ink" x="146" y="120" width="126" height="32" rx="16" fill="#FF6B6B"/>
+      <text class="label" x="209" y="142" text-anchor="middle" font-weight="700">lowest scores</text>
+    </g>
+
+    <text class="small" x="500" y="370" text-anchor="middle">Based on Ward et al. (2017), University of Texas at Austin: working memory and fluid intelligence were</text>
+    <text class="small" x="500" y="392" text-anchor="middle">lowest with the phone on the desk and best with it in another room.</text>
+  </g>
+</svg>
+
+

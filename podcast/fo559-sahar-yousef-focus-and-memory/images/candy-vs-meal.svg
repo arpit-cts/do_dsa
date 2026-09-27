@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="1000" height="440">
+<title>Scrolling for connection versus real people</title>
+<desc>Two cartoon halves compare short-form scrolling as candy with real connection as a meal shared by friends.</desc>
+<rect x="4" y="4" width="992" height="432" rx="24" fill="#FFFDF5" stroke="#E9ECEF" stroke-width="2"/>
+<g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" fill="#212529">
+  <defs><marker id="arrowCandy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#343A40"/></marker></defs>
+  <text x="36" y="58" font-size="29" font-weight="700">Scrolling for connection is like eating candy when you are hungry</text>
+  <line x1="500" y1="86" x2="500" y2="362" stroke="#CED4DA" stroke-width="2"/>
+  <text x="88" y="103" font-size="23" font-weight="700">Short-form scrolling</text>
+  <text x="650" y="103" font-size="23" font-weight="700">Real people</text>
+
+  <g transform="translate(120 128)">
+    <rect x="0" y="8" width="78" height="126" rx="18" fill="#343A40" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <rect x="10" y="24" width="58" height="82" rx="8" fill="#D0EBFF"/>
+    <circle cx="28" cy="60" r="4" fill="#212529"/><circle cx="51" cy="60" r="4" fill="#212529"/>
+    <path d="M28 80 C37 87,47 87,56 80" fill="none" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M76 74 C103 62,125 54,148 45" fill="none" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <g transform="translate(140 28) rotate(12)">
+      <rect x="0" y="0" width="70" height="34" rx="17" fill="#FFE066" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M-18 6 L0 17 L-18 28 Z M70 17 L88 6 L88 28 Z" fill="#FFA8C5" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M24 4 C18 13,18 21,24 30 M47 4 C41 13,41 21,47 30" fill="none" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <g transform="translate(54 255)">
+    <rect x="0" y="0" width="126" height="54" rx="18" fill="#FFF3BF" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="18" y="24" font-size="16" font-weight="700">want it</text>
+    <text x="16" y="43" font-size="15">dopamine &#8593;</text>
+    <path d="M131 27 L164 27" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrowCandy)"/>
+    <rect x="172" y="0" width="238" height="54" rx="18" fill="#FFE3E3" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="190" y="22" font-size="15" font-weight="700">no bonding (oxytocin)</text>
+    <text x="190" y="42" font-size="15">no calm (serotonin)</text>
+    <g transform="translate(207 76)">
+      <circle cx="28" cy="28" r="27" fill="#FFE3E3" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="19" cy="23" r="3" fill="#212529"/><circle cx="37" cy="23" r="3" fill="#212529"/>
+      <path d="M17 38 C25 31,34 31,42 38" fill="none" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <text x="70" y="25" font-size="16" font-weight="700">hungrier and lonelier</text>
+    </g>
+  </g>
+
+  <g transform="translate(625 128)">
+    <g transform="translate(0 22)">
+      <circle cx="35" cy="29" r="25" fill="#FFE8CC" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M16 25 C21 4,50 5,57 23" fill="#343A40" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="27" cy="29" r="3" fill="#212529"/><circle cx="43" cy="29" r="3" fill="#212529"/>
+      <path d="M27 42 C34 48,42 48,49 42" fill="none" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M34 55 L34 100 M29 75 C12 82,3 95,-3 108" fill="none" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(162 22)">
+      <circle cx="35" cy="29" r="25" fill="#FFE8CC" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M12 25 C14 4,52 0,58 27" fill="#9775FA" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="27" cy="29" r="3" fill="#212529"/><circle cx="43" cy="29" r="3" fill="#212529"/>
+      <path d="M26 42 C34 49,43 49,50 42" fill="none" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M35 55 L35 100 M41 75 C62 82,72 95,78 108" fill="none" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    </g>
+    <ellipse cx="126" cy="136" rx="78" ry="22" fill="#D0EBFF" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <ellipse cx="126" cy="126" rx="70" ry="26" fill="#FFFDF5" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M80 124 C103 105,148 105,172 124 C151 140,101 142,80 124 Z" fill="#FF6B6B" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="109" cy="121" r="5" fill="#D3F9D8"/><circle cx="133" cy="116" r="5" fill="#D3F9D8"/><circle cx="146" cy="126" r="5" fill="#D3F9D8"/>
+    <text x="88" y="177" font-size="16" font-weight="700">mapo tofu</text>
+  </g>
+
+  <g transform="translate(532 255)">
+    <rect x="0" y="0" width="126" height="54" rx="18" fill="#FFF3BF" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="18" y="24" font-size="16" font-weight="700">want it</text>
+    <text x="16" y="43" font-size="15">dopamine &#8593;</text>
+    <path d="M132 27 L167 27" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrowCandy)"/>
+    <rect x="176" y="0" width="246" height="54" rx="18" fill="#D3F9D8" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="193" y="22" font-size="15" font-weight="700">bonding + contentment</text>
+    <text x="193" y="42" font-size="15">oxytocin + serotonin</text>
+    <g transform="translate(202 76)">
+      <circle cx="28" cy="28" r="27" fill="#D3F9D8" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M15 23 C19 19,23 19,27 23 M30 23 C34 19,38 19,42 23 M16 35 C24 45,35 45,43 35" fill="none" stroke="#343A40" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <text x="72" y="34" font-size="16" font-weight="700">need met</text>
+    </g>
+  </g>
+  <text x="202" y="406" font-size="15" fill="#868E96">Dr Yousef's hypothesis for why endless scrolling can leave us lonelier.</text>
+</g>
+</svg>
