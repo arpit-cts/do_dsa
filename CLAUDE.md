@@ -12,6 +12,8 @@ Follow them in **every session** — the owner should never have to repeat them.
   - `<ProblemName>.java` — the solution (PascalCase class name, no `package` line, a `main` method that runs a small example).
   - `README.md` — the explanation. GitHub shows it automatically when the folder is opened.
 - Reference example for format and depth: [`dsa/recursion/tower-of-hanoi/`](dsa/recursion/tower-of-hanoi/).
+- `maths_for_dsa/` (beside `dsa/`) is a start-to-end maths course for DSA and FAANG interviews — see the
+  rules in [The maths course](#the-maths-course) below.
 
 ## Whenever I ask for a new problem or topic
 
@@ -56,3 +58,56 @@ Do **all** of the following, even if my message only says "do <problem>":
    - Add a linked contents list at the top; keep headings emoji-free so the GitHub anchor links work.
    - For problems that are not recursive, keep the same child-friendly style: intuition first, how to *think*
      of the idea, diagrams of the process, a dry run, and complexity.
+
+## The maths course
+
+`maths_for_dsa/` teaches all the maths needed for DSA and FAANG interviews, from small to big.
+The roadmap and chapter list live in [`maths_for_dsa/README.md`](maths_for_dsa/README.md).
+
+- Chapters are folders `maths_for_dsa/NN-topic-name/` (two-digit number, lowercase, hyphens), in learning order.
+- Every chapter contains:
+  - `README.md` — the lesson;
+  - one Java file of runnable demos for the chapter's formulas and algorithms (PascalCase name, no `package`,
+    a `main` that prints small examples, Java 11 compatible, runs with `java <File>.java`).
+    Print only ASCII (write `sqrt`, `->`, `x`, `<=`): Windows consoles show other characters as `?`.
+    Handle the edge cases the lesson talks about (0, negatives, `Integer.MIN_VALUE`, overflow).
+    Chapter 17 (mixed practice) is exercises only and has no Java file.
+- When a chapter is added, renamed or removed, update the roadmap (table, diagram, checklist, cheat sheet if
+  needed) and the previous/next links of the neighbouring chapters.
+
+### Chapter README layout
+
+1. `# NN · Title`, then a one-line promise in a quote: `> After this chapter you can …`.
+2. A navigation line: `⬅️ [NN-1 · Title](../<folder>/) · 🏠 [Roadmap](../README.md) · [NN+1 · Title](../<folder>/) ➡️`.
+3. A linked contents list of the numbered `##` sections.
+4. `## 1. Why this matters for DSA` — where the idea shows up in real problems and interviews.
+5. Concept sections from small to big. In each: a story or everyday picture first, then the rule, then *why* the
+   rule is true, a diagram, a worked example by hand, and how it looks in Java. Add a
+   "🧠 How to think of it yourself" note wherever it helps build the habit of discovering the idea.
+6. `## N. Java code` — link the Java file, show the key methods, and paste the **real** output of running it.
+7. `## N. Common mistakes`.
+8. `## N. Interview patterns` — a table: pattern → how to recognise it → LeetCode problems (number and name).
+9. `## N. Exercises` — **Level 1 · Warm-up** (by hand), **Level 2 · Practice**, **Level 3 · Interview**.
+   At least 20 exercises per chapter (chapter 17: at least 50), numbered `**1.**`, `**2.**`, … across levels.
+   Every exercise has its answer and a short reason hidden in a `<details>` block so I try first.
+   Compute every numeric answer (Java, jshell, or a script) before writing it.
+10. `## N. One-minute recap` — short bullets.
+
+### Writing rules for the maths course
+
+- Explain like to a child: simple words, short sentences, everyday analogies (sharing candies, pizza slices,
+  clocks, stairs, dominoes). Emojis are fine in moderation, never in headings.
+- Always show *why* a rule works and how you could discover it yourself — never only the formula.
+- Diagrams everywhere: Mermaid plus plain-text pictures (number lines, tables, grids, ASCII trees).
+  - Never draw a diagram top to bottom (`TD`/`TB`). Trees and ladders grow **bottom to top** (`flowchart BT`,
+    with the root, first call or smallest step at the bottom). Step-by-step processes go **left to right**
+    (`flowchart LR`).
+  - Keep each line inside a Mermaid box to about 22 characters (use `<br/>`), or it gets cut off.
+  - Keep each line inside a code block to 90 characters or fewer, so GitHub shows it without a scrollbar.
+- Write maths as plain text with Unicode symbols (√, ², ≤, ≥, ≈, ×, log₂, ⌊ ⌋), not LaTeX `$…$`.
+  Inside code blocks prefer plain names (`log2`, `floor`, `sqrt`, `x1`) so columns stay aligned.
+- Section headings (`##` and deeper) have no emojis or symbols such as √ & / → or quotes, so their anchor
+  links are predictable. Numbered sections look like `## 3. Plain words`.
+- In tables write a pipe as `\|`, even inside backticks, or the table breaks.
+- Leave a blank line after `</summary>` and before `</details>`, so the Markdown inside renders.
+- Link related chapters (`../NN-topic/`) and related `dsa/` lessons instead of repeating them.
