@@ -12,6 +12,10 @@ Follow them in **every session** — the owner should never have to repeat them.
   - `<ProblemName>.java` — the solution (PascalCase class name, no `package` line, a `main` method that runs a small example).
   - `README.md` — the explanation. GitHub shows it automatically when the folder is opened.
 - Reference example for format and depth: [`dsa/recursion/tower-of-hanoi/`](dsa/recursion/tower-of-hanoi/).
+- [`dsa/recursion/think_recursion/`](dsa/recursion/think_recursion/) is a **thinking-only** guide (no Java, by the
+  owner's choice): faith and expectation in depth, the call stack, the recursion tree, backtracking, how much
+  practice is enough, and 25 no-code exercises. Keep it code-free; point new recursion problems to it.
+  (Folder names the owner picks, like `think_recursion` and `maths_for_dsa`, are kept exactly as given.)
 - `maths_for_dsa/` (beside `dsa/`) is a start-to-end maths course for DSA and FAANG interviews — see the
   rules in [The maths course](#the-maths-course) below.
 

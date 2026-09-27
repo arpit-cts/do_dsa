@@ -176,6 +176,9 @@ code shortest. (With `n == 1` you would print the single move and then return.)
 
 The code is only a few lines. The **thinking** is the real skill. Here is how that thinking is built.
 
+> 🧠 Want to train this thinking step by step, with 25 no-code exercises and backtracking too?
+> See the [Think Recursion guide](../think_recursion/).
+
 ### 4.1 Why the faith is not blind — the domino trick
 
 Imagine a long line of dominoes:
