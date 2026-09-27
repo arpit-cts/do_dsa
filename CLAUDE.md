@@ -38,11 +38,15 @@ Do **all** of the following, even if my message only says "do <problem>":
      - how to discover the smaller sub-problem (look at what is blocking you, or what is left over);
      - why the faith is safe (dominoes / mathematical induction);
      - a reusable checklist of questions and habits for building this way of thinking.
-   - Draw the **complete tree diagram, from bottom to top**:
+   - Draw the **complete tree diagram, flowing from bottom to top** (never top to bottom):
      - the full recursion tree for a small input, including every base-case call;
-     - how calls go **down** to the base cases and how answers come back **up**, level by level, to the first call;
+     - base cases in the bottom row, the first call at the top, and arrows pointing **up** — the answers
+       climb level by level back to the first call;
+     - Mermaid: `flowchart BT` with `child --> parent` edges (GitHub renders Mermaid);
+     - a plain-text ASCII version that is the **same upright tree** (base cases at the bottom, `▲` arrows),
+       not a sideways folder-style `├──` tree;
      - a bottom-to-top "ladder of faith" (smallest input → biggest input);
-     - use Mermaid (`flowchart TD` / `flowchart BT`, which GitHub renders) **and** a plain-text ASCII version.
+     - keep every line inside a Mermaid box short (about 22 characters) — longer lines get cut off.
    - Also include: a dry-run table, a line-by-line code walkthrough, time & space complexity with the reason,
      common mistakes, "try it yourself" exercises, and a one-minute recap.
    - Add a linked contents list at the top; keep headings emoji-free so the GitHub anchor links work.

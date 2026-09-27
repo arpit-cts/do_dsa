@@ -323,15 +323,13 @@ Done! Total moves = 7 (formula: 2^3 - 1 = 7)
 Every box is **one function call**. Every box (except the base cases) has **two children** — its two
 faith calls. A box prints its own move **after its left child finishes and before its right child starts**.
 
+**Read it from the bottom to the top ⬆️** Start at the bottom row: the 8 base cases, `toh(0)`. They have
+nothing to do, so each one hands control straight back up. Every arrow means *"my job is done — back to
+you!"*: a helper box reports up to the box that asked for its help. Keep climbing until you reach the top
+box, `toh(3, A, B, C)`. When it is done, all 3 disks are on B. 🎉
+
 ```mermaid
-flowchart TD
-    T3["toh(3, A, B, C)<br/>Move 4: disk 3 A→B"]
-    T2a["toh(2, A, C, B)<br/>Move 2: disk 2 A→C"]
-    T2b["toh(2, C, B, A)<br/>Move 6: disk 2 C→B"]
-    T1a["toh(1, A, B, C)<br/>Move 1: disk 1 A→B"]
-    T1b["toh(1, B, C, A)<br/>Move 3: disk 1 B→C"]
-    T1c["toh(1, C, A, B)<br/>Move 5: disk 1 C→A"]
-    T1d["toh(1, A, B, C)<br/>Move 7: disk 1 A→B"]
+flowchart BT
     Z1["toh(0, A, C, B)<br/>return"]
     Z2["toh(0, C, B, A)<br/>return"]
     Z3["toh(0, B, A, C)<br/>return"]
@@ -340,21 +338,28 @@ flowchart TD
     Z6["toh(0, B, A, C)<br/>return"]
     Z7["toh(0, A, C, B)<br/>return"]
     Z8["toh(0, C, B, A)<br/>return"]
+    T1a["toh(1, A, B, C)<br/>Move 1: disk 1 A→B"]
+    T1b["toh(1, B, C, A)<br/>Move 3: disk 1 B→C"]
+    T1c["toh(1, C, A, B)<br/>Move 5: disk 1 C→A"]
+    T1d["toh(1, A, B, C)<br/>Move 7: disk 1 A→B"]
+    T2a["toh(2, A, C, B)<br/>Move 2: disk 2 A→C"]
+    T2b["toh(2, C, B, A)<br/>Move 6: disk 2 C→B"]
+    T3["toh(3, A, B, C)<br/>Move 4: disk 3 A→B"]
 
-    T3 -->|"Faith 1"| T2a
-    T3 -->|"Faith 2"| T2b
-    T2a -->|"Faith 1"| T1a
-    T2a -->|"Faith 2"| T1b
-    T2b -->|"Faith 1"| T1c
-    T2b -->|"Faith 2"| T1d
-    T1a --> Z1
-    T1a --> Z2
-    T1b --> Z3
-    T1b --> Z4
-    T1c --> Z5
-    T1c --> Z6
-    T1d --> Z7
-    T1d --> Z8
+    Z1 --> T1a
+    Z2 --> T1a
+    Z3 --> T1b
+    Z4 --> T1b
+    Z5 --> T1c
+    Z6 --> T1c
+    Z7 --> T1d
+    Z8 --> T1d
+    T1a -->|"Faith 1 done"| T2a
+    T1b -->|"Faith 2 done"| T2a
+    T1c -->|"Faith 1 done"| T2b
+    T1d -->|"Faith 2 done"| T2b
+    T2a -->|"Faith 1 done"| T3
+    T2b -->|"Faith 2 done"| T3
 
     classDef top fill:#ffe08a,stroke:#b8860b,color:#000
     classDef mid fill:#cfe8ff,stroke:#1f6feb,color:#000
@@ -364,33 +369,33 @@ flowchart TD
     class Z1,Z2,Z3,Z4,Z5,Z6,Z7,Z8 base
 ```
 
-The same tree as text. **Read it from top to bottom — that is the exact order in which the computer
-does things:**
+The same tree as plain text. Read it **from the bottom to the top** too:
 
 ```text
-toh(3, A, B, C)                           ← my job: move 3 disks A → B
-├── toh(2, A, C, B)                       ← Faith 1: move 2 disks A → C
-│   ├── toh(1, A, B, C)                   ← move 1 disk A → B
-│   │   ├── toh(0, A, C, B)               ← base case: return
-│   │   ├── PRINT  Move 1: disk 1 A → B
-│   │   └── toh(0, C, B, A)               ← base case: return
-│   ├── PRINT  Move 2: disk 2 A → C
-│   └── toh(1, B, C, A)                   ← move 1 disk B → C
-│       ├── toh(0, B, A, C)               ← base case: return
-│       ├── PRINT  Move 3: disk 1 B → C
-│       └── toh(0, A, C, B)               ← base case: return
-├── PRINT  Move 4: disk 3 A → B           ← the top box's own work
-└── toh(2, C, B, A)                       ← Faith 2: move 2 disks C → B
-    ├── toh(1, C, A, B)                   ← move 1 disk C → A
-    │   ├── toh(0, C, B, A)               ← base case: return
-    │   ├── PRINT  Move 5: disk 1 C → A
-    │   └── toh(0, B, A, C)               ← base case: return
-    ├── PRINT  Move 6: disk 2 C → B
-    └── toh(1, A, B, C)                   ← move 1 disk A → B
-        ├── toh(0, A, C, B)               ← base case: return
-        ├── PRINT  Move 7: disk 1 A → B
-        └── toh(0, C, B, A)               ← base case: return
+                                         toh(3, A, B, C)
+                                       Move 4: disk 3 A→B
+                                                ▲
+                        ┌───────────────────────┴───────────────────────┐
+                  Faith 1 done                                    Faith 2 done
+                        │                                               │
+                 toh(2, A, C, B)                                 toh(2, C, B, A)
+               Move 2: disk 2 A→C                              Move 6: disk 2 C→B
+                        ▲                                               ▲
+            ┌───────────┴───────────┐                       ┌───────────┴───────────┐
+      Faith 1 done            Faith 2 done            Faith 1 done            Faith 2 done
+            │                       │                       │                       │
+     toh(1, A, B, C)         toh(1, B, C, A)         toh(1, C, A, B)         toh(1, A, B, C)
+   Move 1: disk 1 A→B      Move 3: disk 1 B→C      Move 5: disk 1 C→A      Move 7: disk 1 A→B
+            ▲                       ▲                       ▲                       ▲
+      ┌─────┴─────┐           ┌─────┴─────┐           ┌─────┴─────┐           ┌─────┴─────┐
+      │           │           │           │           │           │           │           │
+   toh(0)      toh(0)      toh(0)      toh(0)      toh(0)      toh(0)      toh(0)      toh(0)
+   return      return      return      return      return      return      return      return
 ```
+
+🔢 **Follow the `Move` numbers 1 → 7** to see the real order of the moves. They jump up and down the tree
+(Move 1 is near the bottom, Move 4 is at the very top, Move 7 is near the bottom again) because a box can
+make its own move only after its **Faith 1** helper has completely finished.
 
 ---
 
@@ -438,10 +443,10 @@ This is the domino idea from section 4.1, drawn **from bottom to top**. Each ste
 
 ```mermaid
 flowchart BT
-    L0["toh(0): 0 disks<br/>do nothing = 0 moves<br/>base case, obviously correct"]
-    L1["toh(1): 1 disk<br/>toh(0) + move disk 1 + toh(0)<br/>0 + 1 + 0 = 1 move"]
-    L2["toh(2): 2 disks<br/>toh(1) + move disk 2 + toh(1)<br/>1 + 1 + 1 = 3 moves"]
-    L3["toh(3): 3 disks<br/>toh(2) + move disk 3 + toh(2)<br/>3 + 1 + 3 = 7 moves"]
+    L0["toh(0): 0 disks<br/>base case<br/>do nothing = 0 moves"]
+    L1["toh(1): 1 disk<br/>toh(0) + disk 1 + toh(0)<br/>0 + 1 + 0 = 1 move"]
+    L2["toh(2): 2 disks<br/>toh(1) + disk 2 + toh(1)<br/>1 + 1 + 1 = 3 moves"]
+    L3["toh(3): 3 disks<br/>toh(2) + disk 3 + toh(2)<br/>3 + 1 + 3 = 7 moves"]
     L0 -->|"0 works, so 1 works"| L1
     L1 -->|"1 works, so 2 works"| L2
     L2 -->|"2 works, so 3 works"| L3
