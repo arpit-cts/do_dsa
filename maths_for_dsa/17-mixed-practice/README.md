@@ -2,7 +2,7 @@
 
 > After this chapter you can choose the right maths tool under interview pressure and explain why it works.
 
-⬅️ [16 · Logic, Sets and Proofs](../16-logic-sets-and-proofs/) · 🏠 [Roadmap](../README.md)
+⬅️ [16 · Logic, Sets and Proofs](../16-logic-sets-and-proofs/) · 🏠 [Roadmap](../README.md) · [18 · Advanced Extras](../18-advanced-extras/) ➡️
 
 ## Contents
 
@@ -1095,6 +1095,9 @@ What to do next:
 2. Revisit the named chapters.
 3. Solve the matching LeetCode problems from the chapter tables.
 4. Return to [`dsa/`](../../dsa/) and mix maths with full problem solving.
+5. Want more? The bonus chapter [18 · Advanced Extras](../18-advanced-extras/) covers the rare advanced
+   tools: matrix power, games and Nim, Euler's totient, the Chinese remainder theorem, Miller–Rabin and
+   graph counting facts.
 
 ```mermaid
 flowchart LR

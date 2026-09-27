@@ -7,7 +7,7 @@ Every chapter explains the idea like you are ten years old 🧒, draws pictures 
 and ends with lots of exercises 🏋️ — with the answers hidden, so you try first.
 
 > 🎯 **The promise:** finish all 17 chapters *and their exercises*, and maths will never block you in a
-> DSA problem or an interview again.
+> DSA problem or an interview again. Want to go further? The bonus chapter 18 covers the rare advanced tools.
 
 ## Contents
 
@@ -63,20 +63,24 @@ flowchart BT
     L5["Level 5<br/>Counting and chance<br/>chapters 13 to 14"]
     L6["Level 6<br/>Shapes and logic<br/>chapters 15 to 16"]
     L7["Final<br/>Mixed practice<br/>chapter 17"]
-    L1 --> L2 --> L3 --> L4 --> L5 --> L6 --> L7
+    L8["Bonus<br/>Advanced extras<br/>chapter 18"]
+    L1 --> L2 --> L3 --> L4 --> L5 --> L6 --> L7 --> L8
 
     classDef start fill:#ffe08a,stroke:#b8860b,color:#000
     classDef step fill:#cfe8ff,stroke:#1f6feb,color:#000
     classDef goal fill:#c8f7c5,stroke:#2da44e,color:#000
+    classDef bonus fill:#e8d5ff,stroke:#8250df,color:#000
     class L1 start
     class L2,L3,L4,L5,L6 step
     class L7 goal
+    class L8 bonus
 ```
 
 The same ladder as plain text:
 
 ```text
-   ▲  FINAL    17 Mixed practice  (every tool together, mock interview)
+   ▲  BONUS    18 Advanced extras (matrix power, games, totient, CRT, primes, graphs)
+   │  FINAL    17 Mixed practice  (every tool together, mock interview)
    │  LEVEL 6  15 Geometry and grids · 16 Logic, sets and proofs
    │  LEVEL 5  13 Counting and combinatorics · 14 Probability and randomness
    │  LEVEL 4  12 Bits and binary
@@ -95,6 +99,7 @@ Why this order?
   Now you can also *prove* why the √n trick is fast, thanks to Level 2.
 - **Levels 4 to 6** add bits, counting, probability, grids and proofs.
 - **Final:** mixed drills, so you learn to pick the right tool by yourself.
+- **Bonus:** rare advanced tools for hard problems and "what if n is 10¹⁸?" follow-ups.
 
 ---
 
@@ -119,6 +124,7 @@ Why this order?
 | 15 | [Geometry and Grids](15-geometry-and-grids/) | coordinates, rows and columns, direction arrays, distances, slopes, rectangles, rotating and walking matrices | Number of Islands (200), Rotate Image (48), K Closest Points (973) |
 | 16 | [Logic, Sets and Proofs](16-logic-sets-and-proofs/) | AND/OR/NOT, De Morgan, sets, proof by induction (the maths behind recursion faith), contradiction, invariants | Linked List Cycle (141), Majority Element (169) |
 | 17 | [Mixed Practice](17-mixed-practice/) | mixed drills from every chapter, "which tool?" puzzles, and a mock maths interview round | everything together |
+| 18 | [Advanced Extras](18-advanced-extras/) *(bonus)* | matrix power for huge n, game theory and Nim, Euler's totient, the Chinese remainder theorem, the Miller–Rabin prime test, graph counting facts | N-th Tribonacci Number (1137), Nim Game (292), Redundant Connection (684) |
 
 🔗 This course pairs with the problems in [`dsa/`](../dsa/). For example, the
 [Tower of Hanoi lesson](../dsa/recursion/tower-of-hanoi/) uses powers of two (03), recurrences (07)
@@ -166,6 +172,7 @@ About one hour a day. Go slower if you need to — understanding beats speed.
 | 5 | 11, 12 | You are comfortable with "mod 10⁹ + 7", fast power and bit tricks. |
 | 6 | 13, 14 | You can count arrangements and reason about chance. |
 | 7 | 15, 16, 17 | You can handle grids and proofs, and you pass the mixed mock round. |
+| 8 (optional) | 18 | You know the rare advanced tools and when a hard problem needs them. |
 
 💡 Keep solving `dsa/` problems at the same time — each chapter tells you which problems use its maths.
 
@@ -192,6 +199,7 @@ Edit this file and change `[ ]` to `[x]` when you finish a chapter *and* its exe
 - [ ] 15 · [Geometry and Grids](15-geometry-and-grids/)
 - [ ] 16 · [Logic, Sets and Proofs](16-logic-sets-and-proofs/)
 - [ ] 17 · [Mixed Practice](17-mixed-practice/)
+- [ ] 18 · [Advanced Extras](18-advanced-extras/) *(bonus)*
 
 ---
 
@@ -262,6 +270,14 @@ GEOMETRY (15)
   Manhattan distance = |x1 − x2| + |y1 − y2|
   Euclidean distance = sqrt((x1 − x2)² + (y1 − y2)²)   → compare squared distances instead
   cell (r, c) in a grid with C columns  ↔  index r × C + c
+
+ADVANCED EXTRAS (18, bonus)
+  [[1,1],[1,0]]^n = [[F(n+1), F(n)], [F(n), F(n-1)]]    k x k matrix power: O(k^3 log n)
+  game: W if some move reaches L, L if every move reaches W     Nim: lose  ⇔  xor = 0
+  phi(n) = n × (1 - 1/p) for each prime p of n      a^phi(m) = 1 (mod m) if gcd(a, m) = 1
+  coprime moduli: x mod m1, ..., x mod mk fix x exactly once modulo m1 × ... × mk
+  Miller-Rabin with bases 2, 3, 5, ..., 37 is exact for every long
+  degree sum = 2 × edges      tree: n - 1 edges      at most n(n - 1)/2 edges
 ```
 
 Now go to [chapter 01](01-numbers-and-integer-division/) and start climbing! 🚀
