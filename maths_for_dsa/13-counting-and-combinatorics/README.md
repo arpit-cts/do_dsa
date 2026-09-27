@@ -416,7 +416,7 @@ The course draws it **upward**. Row 0 is at the bottom. Each number is the sum o
 the two numbers just below it.
 
 ```text
-           1    5    10   10    5    1    row 5
+           1    5    10   10    5    1     row 5
              1    4    6    4    1         row 4
                1    3    3    1            row 3
                  1    2    1               row 2
