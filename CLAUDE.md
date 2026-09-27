@@ -13,8 +13,10 @@ Follow them in **every session** — the owner should never have to repeat them.
   - `README.md` — the explanation. GitHub shows it automatically when the folder is opened.
 - Reference example for format and depth: [`dsa/recursion/tower-of-hanoi/`](dsa/recursion/tower-of-hanoi/).
 - [`dsa/recursion/think_recursion/`](dsa/recursion/think_recursion/) is a **thinking-only** guide (no Java, by the
-  owner's choice): faith and expectation in depth, the call stack, the recursion tree, backtracking, how much
-  practice is enough, and 25 no-code exercises. Keep it code-free; point new recursion problems to it.
+  owner's choice) in 9 parts (`01-…` to `09-…`, with `README.md` as the index): faith and expectation in
+  depth, the call stack, the recursion tree, the seven patterns, backtracking, how much practice is enough,
+  and 105 no-code exercises ending in a 25-question final test. Keep it code-free; point new recursion
+  problems to it. If an exercise is added or removed, update the counts in its README and in the part.
   (Folder names the owner picks, like `think_recursion` and `maths_for_dsa`, are kept exactly as given.)
 - `maths_for_dsa/` (beside `dsa/`) is a start-to-end maths course for DSA and FAANG interviews — see the
   rules in [The maths course](#the-maths-course) below.
