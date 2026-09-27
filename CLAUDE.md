@@ -38,14 +38,18 @@ Do **all** of the following, even if my message only says "do <problem>":
      - how to discover the smaller sub-problem (look at what is blocking you, or what is left over);
      - why the faith is safe (dominoes / mathematical induction);
      - a reusable checklist of questions and habits for building this way of thinking.
-   - Draw the **complete tree diagram, flowing from bottom to top** (never top to bottom):
+   - Draw the **complete tree diagram growing from bottom to top, like a real tree** (never top to bottom):
      - the full recursion tree for a small input, including every base-case call;
-     - base cases in the bottom row, the first call at the top, and arrows pointing **up** — the answers
-       climb level by level back to the first call;
-     - Mermaid: `flowchart BT` with `child --> parent` edges (GitHub renders Mermaid);
-     - a plain-text ASCII version that is the **same upright tree** (base cases at the bottom, `▲` arrows),
-       not a sideways folder-style `├──` tree;
-     - a bottom-to-top "ladder of faith" (smallest input → biggest input);
+     - the **root (the first call) in the bottom row**, each call's helpers just above it, and the **leaves
+       (the base cases) in the top row**; every arrow points **up**, from a call to the helpers it asks;
+     - only reversing the arrows of a tree that still has the first call at the top is **not** enough —
+       the drawing itself must put the first call at the bottom;
+     - explain both directions: the calls climb **up** to the leaves, the answers come back **down** to the root;
+     - Mermaid: `flowchart BT` with `parent --> child` edges; define the root first and the left helper
+       (Faith 1) before the right one, so the left-to-right order stays correct (GitHub renders Mermaid);
+     - a plain-text ASCII version that is the **same upward-growing tree** (root at the bottom, `└─┬─┘`
+       joints, `▲` arrows), not a sideways folder-style `├──` tree; keep lines ≤ about 93 characters;
+     - a bottom-to-top "ladder of faith" (smallest input → biggest input), with a note that it is not the tree;
      - keep every line inside a Mermaid box short (about 22 characters) — longer lines get cut off.
    - Also include: a dry-run table, a line-by-line code walkthrough, time & space complexity with the reason,
      common mistakes, "try it yourself" exercises, and a one-minute recap.

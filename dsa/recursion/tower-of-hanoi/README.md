@@ -220,7 +220,7 @@ Nobody is born knowing "use n − 1 disks". You **discover** it by asking these 
    "`toh(n, src, dst, hlp)` moves n disks from src to dst using hlp." If you can't say it clearly, you can't code it.
 2. **Shrink the input, but keep the same *kind* of problem.** n → n − 1, a whole array → the rest of
    the array, a string → a shorter string.
-3. **Never trace the faith call while designing.** Your brain will *want* to follow every call down — stop it!
+3. **Never trace the faith call while designing.** Your brain will *want* to follow every call deeper and deeper — stop it!
    Think about **one level only**: "My friend has done their part. What do I do now?"
 4. **Do only a tiny bit of work yourself.** The boss does a little; the friends do the rest.
    Here the boss makes just **one move**.
@@ -284,8 +284,9 @@ static void toh(int n, char source, char destination, char helper) {
 | `toh(n - 1, helper, destination, source);` | Faith 2 🙏 | "Friend, please put the smaller disks back on top of the big one." |
 
 > 📍 **Where does the printing happen?** *Between* the two recursive calls.
-> Code before the first call runs on the way **down** (the *pre* area), code between the calls runs
-> **in the middle** (the *in* area), and code after the second call runs on the way **up** (the *post* area).
+> Code before the first call runs **before** any helper starts (the *pre* area), code between the calls runs
+> **in the middle** (the *in* area), and code after the second call runs **after** both helpers are done, on
+> the way back (the *post* area).
 > Tower of Hanoi does its work in the **in** area.
 
 ### Run it
@@ -323,13 +324,22 @@ Done! Total moves = 7 (formula: 2^3 - 1 = 7)
 Every box is **one function call**. Every box (except the base cases) has **two children** — its two
 faith calls. A box prints its own move **after its left child finishes and before its right child starts**.
 
-**Read it from the bottom to the top ⬆️** Start at the bottom row: the 8 base cases, `toh(0)`. They have
-nothing to do, so each one hands control straight back up. Every arrow means *"my job is done — back to
-you!"*: a helper box reports up to the box that asked for its help. Keep climbing until you reach the top
-box, `toh(3, A, B, C)`. When it is done, all 3 disks are on B. 🎉
+**Read it from the bottom to the top ⬆️** — it grows like a real tree 🌳. The first call,
+`toh(3, A, B, C)`, is the **root at the bottom**. Every arrow points **up** and means *"Friend, please
+help me with a smaller job!"*: a box asks its two helpers just above it — **Faith 1** on the left,
+**Faith 2** on the right. Keep climbing until you reach the **leaves at the top**: the 8 base cases,
+`toh(0)`, which have nothing to do and just return. (Computer scientists really do call them the *root*
+and the *leaves*!) When the root at the bottom finishes, all 3 disks are on B. 🎉
 
 ```mermaid
 flowchart BT
+    T3["toh(3, A, B, C)<br/>Move 4: disk 3 A→B"]
+    T2a["toh(2, A, C, B)<br/>Move 2: disk 2 A→C"]
+    T2b["toh(2, C, B, A)<br/>Move 6: disk 2 C→B"]
+    T1a["toh(1, A, B, C)<br/>Move 1: disk 1 A→B"]
+    T1b["toh(1, B, C, A)<br/>Move 3: disk 1 B→C"]
+    T1c["toh(1, C, A, B)<br/>Move 5: disk 1 C→A"]
+    T1d["toh(1, A, B, C)<br/>Move 7: disk 1 A→B"]
     Z1["toh(0, A, C, B)<br/>return"]
     Z2["toh(0, C, B, A)<br/>return"]
     Z3["toh(0, B, A, C)<br/>return"]
@@ -338,33 +348,26 @@ flowchart BT
     Z6["toh(0, B, A, C)<br/>return"]
     Z7["toh(0, A, C, B)<br/>return"]
     Z8["toh(0, C, B, A)<br/>return"]
-    T1a["toh(1, A, B, C)<br/>Move 1: disk 1 A→B"]
-    T1b["toh(1, B, C, A)<br/>Move 3: disk 1 B→C"]
-    T1c["toh(1, C, A, B)<br/>Move 5: disk 1 C→A"]
-    T1d["toh(1, A, B, C)<br/>Move 7: disk 1 A→B"]
-    T2a["toh(2, A, C, B)<br/>Move 2: disk 2 A→C"]
-    T2b["toh(2, C, B, A)<br/>Move 6: disk 2 C→B"]
-    T3["toh(3, A, B, C)<br/>Move 4: disk 3 A→B"]
 
-    Z1 --> T1a
-    Z2 --> T1a
-    Z3 --> T1b
-    Z4 --> T1b
-    Z5 --> T1c
-    Z6 --> T1c
-    Z7 --> T1d
-    Z8 --> T1d
-    T1a -->|"Faith 1 done"| T2a
-    T1b -->|"Faith 2 done"| T2a
-    T1c -->|"Faith 1 done"| T2b
-    T1d -->|"Faith 2 done"| T2b
-    T2a -->|"Faith 1 done"| T3
-    T2b -->|"Faith 2 done"| T3
+    T3 -->|"Faith 1"| T2a
+    T3 -->|"Faith 2"| T2b
+    T2a -->|"Faith 1"| T1a
+    T2a -->|"Faith 2"| T1b
+    T2b -->|"Faith 1"| T1c
+    T2b -->|"Faith 2"| T1d
+    T1a --> Z1
+    T1a --> Z2
+    T1b --> Z3
+    T1b --> Z4
+    T1c --> Z5
+    T1c --> Z6
+    T1d --> Z7
+    T1d --> Z8
 
-    classDef top fill:#ffe08a,stroke:#b8860b,color:#000
+    classDef first fill:#ffe08a,stroke:#b8860b,color:#000
     classDef mid fill:#cfe8ff,stroke:#1f6feb,color:#000
     classDef base fill:#eeeeee,stroke:#888888,color:#444
-    class T3 top
+    class T3 first
     class T2a,T2b,T1a,T1b,T1c,T1d mid
     class Z1,Z2,Z3,Z4,Z5,Z6,Z7,Z8 base
 ```
@@ -372,46 +375,50 @@ flowchart BT
 The same tree as plain text. Read it **from the bottom to the top** too:
 
 ```text
-                                         toh(3, A, B, C)
-                                       Move 4: disk 3 A→B
-                                                ▲
-                        ┌───────────────────────┴───────────────────────┐
-                  Faith 1 done                                    Faith 2 done
-                        │                                               │
-                 toh(2, A, C, B)                                 toh(2, C, B, A)
-               Move 2: disk 2 A→C                              Move 6: disk 2 C→B
-                        ▲                                               ▲
-            ┌───────────┴───────────┐                       ┌───────────┴───────────┐
-      Faith 1 done            Faith 2 done            Faith 1 done            Faith 2 done
+   toh(0)      toh(0)      toh(0)      toh(0)      toh(0)      toh(0)      toh(0)      toh(0)
+   return      return      return      return      return      return      return      return
+      ▲           ▲           ▲           ▲           ▲           ▲           ▲           ▲
+      └─────┬─────┘           └─────┬─────┘           └─────┬─────┘           └─────┬─────┘
             │                       │                       │                       │
      toh(1, A, B, C)         toh(1, B, C, A)         toh(1, C, A, B)         toh(1, A, B, C)
    Move 1: disk 1 A→B      Move 3: disk 1 B→C      Move 5: disk 1 C→A      Move 7: disk 1 A→B
             ▲                       ▲                       ▲                       ▲
-      ┌─────┴─────┐           ┌─────┴─────┐           ┌─────┴─────┐           ┌─────┴─────┐
-      │           │           │           │           │           │           │           │
-   toh(0)      toh(0)      toh(0)      toh(0)      toh(0)      toh(0)      toh(0)      toh(0)
-   return      return      return      return      return      return      return      return
+         Faith 1                 Faith 2                 Faith 1                 Faith 2
+            └───────────┬───────────┘                       └───────────┬───────────┘
+                        │                                               │
+                 toh(2, A, C, B)                                 toh(2, C, B, A)
+               Move 2: disk 2 A→C                              Move 6: disk 2 C→B
+                        ▲                                               ▲
+                     Faith 1                                         Faith 2
+                        └───────────────────────┬───────────────────────┘
+                                                │
+                                         toh(3, A, B, C)
+                                       Move 4: disk 3 A→B
 ```
 
 🔢 **Follow the `Move` numbers 1 → 7** to see the real order of the moves. They jump up and down the tree
-(Move 1 is near the bottom, Move 4 is at the very top, Move 7 is near the bottom again) because a box can
+(Move 1 is near the top, Move 4 is at the very bottom, Move 7 is near the top again) because a box can
 make its own move only after its **Faith 1** helper has completely finished.
 
 ---
 
 ## 7. Reading the tree from bottom to top
 
-The computer **goes down** the tree by making calls and hits the **bottom** (the base cases).
-Then the answers **come back up**, level by level, until they reach the **top** (the very first call).
+The tree in section 6 grows **up**, so the computer walks it in two directions:
 
-### 7.1 Level by level, from the bottom up
+- **Calls climb up ⬆️** — starting at the root at the bottom (the very first call), each box asks its
+  helpers just above it, until the calls reach the **leaves at the top** (the base cases).
+- **Answers come back down ⬇️** — a box is finished only when both of its helpers are finished, so the
+  answers travel back down, level by level, until they reach the **root at the bottom**.
 
-| Level (bottom → top) | Boxes | What each box does | Moves printed at this level | Total moves under one box |
+### 7.1 Level by level, from the leaves back to the root
+
+| Level (leaves → root) | Boxes | What each box does | Moves printed at this level | Total moves by one box and its helpers |
 |---|---|---|---|---|
-| `toh(0)` — the bottom | 8 | nothing — just returns | — | 0 |
+| `toh(0)` — the leaves (top row) | 8 | nothing — just returns | — | 0 |
 | `toh(1)` | 4 | nothing + **1 move** (disk 1) + nothing | 1, 3, 5, 7 | 0 + 1 + 0 = **1** |
 | `toh(2)` | 2 | 1 move + **1 move** (disk 2) + 1 move | 2, 6 | 1 + 1 + 1 = **3** |
-| `toh(3)` — the top | 1 | 3 moves + **1 move** (disk 3) + 3 moves | 4 | 3 + 1 + 3 = **7** |
+| `toh(3)` — the root (bottom row) | 1 | 3 moves + **1 move** (disk 3) + 3 moves | 4 | 3 + 1 + 3 = **7** |
 
 Things to notice 👀
 
@@ -426,20 +433,26 @@ Every call that is still waiting for its friends sits on a pile, like plates.
 At the **deepest** moment (the very first base case), the pile looks like this:
 
 ```text
-|  toh(0, A, C, B)  |  ← top of the pile = the deepest call (bottom of the tree). It finishes FIRST.
+|  toh(0, A, C, B)  |  ← top of the pile = the deepest call. It finishes FIRST.
 |  toh(1, A, B, C)  |
 |  toh(2, A, C, B)  |
-|  toh(3, A, B, C)  |  ← bottom of the pile = the first call (top of the tree). It finishes LAST.
+|  toh(3, A, B, C)  |  ← bottom of the pile = the first call. It finishes LAST.
 +-------------------+
 ```
 
-A plate is taken off only when its whole job is done, so answers always flow **from the bottom of the
-tree back up to the top**. The pile is never taller than n + 1 = 4 plates — that's why this uses very
-little memory.
+See how the pile matches the tree in section 6? The first call is at the **bottom** of both, and the
+deepest call (a leaf) is at the **top** of both. The pile is simply the path from the root up to the leaf
+the computer is visiting right now.
+
+A plate is taken off only when its whole job is done, so answers always flow **from the leaves at the top
+of the tree back down to the root at the bottom**. The pile is never taller than n + 1 = 4 plates — that's
+why this uses very little memory.
 
 ### 7.3 The ladder of faith — from the smallest to the biggest
 
-This is the domino idea from section 4.1, drawn **from bottom to top**. Each step stands on the step below it:
+This is the domino idea from section 4.1, drawn **from bottom to top**. Each step stands on the step below it.
+Don't mix it up with the tree in section 6: the tree shows **who asks whom for help** (the first call is at
+the bottom), while this ladder shows **why the faith is safe** (the smallest case is at the bottom):
 
 ```mermaid
 flowchart BT
@@ -477,8 +490,8 @@ Disks are listed **bottom → top**. Check that a bigger number is never on top 
 | 6 | `toh(2, C, B, A)` | disk 2: C → B | 1 | 3 2 | — |
 | 7 | `toh(1, A, B, C)` | disk 1: A → B | — | 3 2 1 | — |
 
-- After **move 3**, disks 1 and 2 are on C → **Faith 1** of the top box is done.
-- **Move 4** is the top box's **own work** — the biggest disk jumps to B.
+- After **move 3**, disks 1 and 2 are on C → **Faith 1** of the root box (`toh(3)`, at the bottom of the tree) is done.
+- **Move 4** is the root box's **own work** — the biggest disk jumps to B.
 - After **move 7**, disks 1 and 2 are on B → **Faith 2** is done. 🎉
 
 ---
@@ -521,7 +534,8 @@ and that is the **smallest** number of moves possible.
 
 ## 11. Try it yourself
 
-1. Run `java TowerOfHanoi.java 2` and draw its tree on paper (7 boxes: 1 + 2 + 4).
+1. Run `java TowerOfHanoi.java 2` and draw its tree on paper — put the first call at the bottom of the page
+   and let the tree grow up (7 boxes: 1 + 2 + 4).
 2. Before running `java TowerOfHanoi.java 4`, **predict** the number of moves. (Hint: 2⁴ − 1.)
 3. Write a function `countMoves(n)` that **returns** the number of moves instead of printing them:
    - Expectation: `countMoves(n)` returns the number of moves needed for n disks.
